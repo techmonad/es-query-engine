@@ -17,7 +17,6 @@ trait EsConfig {
 
   lazy val indexName: String = esConfig.getString("data.index")
 
-
   lazy val client: Client = {
     val nodes = esConfig.getStringList("nodes")
     val port = esConfig.getInt("port")

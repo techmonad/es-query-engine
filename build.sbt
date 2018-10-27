@@ -6,6 +6,7 @@ scalaVersion := "2.12.7"
 
 
 libraryDependencies ++= Seq(
+  "org.apache.kafka" % "kafka-clients" % "2.0.0",
   "com.typesafe" % "config" % "1.3.3",
   "org.elasticsearch.client" % "transport" % "6.4.2",
   "com.typesafe.akka" %% "akka-actor" % "2.5.17",
