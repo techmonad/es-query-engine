@@ -1,4 +1,4 @@
-name := "es-stateful-query-engine"
+name := "es-query-engine"
 
 version := "0.1"
 
