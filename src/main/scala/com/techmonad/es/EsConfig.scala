@@ -1,4 +1,4 @@
-package com.techmonad.es.util
+package com.techmonad.es
 
 import java.net.InetAddress
 

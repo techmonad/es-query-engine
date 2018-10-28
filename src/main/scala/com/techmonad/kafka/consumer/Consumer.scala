@@ -29,16 +29,15 @@ class Consumer(topics: List[String], servers: List[String]) {
 
   consumer.subscribe(topics.asJava)
 
-  def read(): Vector[String] =
+  def read(): List[String] =
     try {
       consumer.poll(Duration.ofMillis(100))
         .asScala.map { record => record.value() }
-        .toVector
+        .toList
     } catch {
       case NonFatal(th) =>
         logger.error("Error on reading consumer ", th)
-        Vector.empty[String]
-
+        Nil
     }
 
   def close(): Unit =
